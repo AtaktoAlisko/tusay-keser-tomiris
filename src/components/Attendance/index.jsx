@@ -4,7 +4,7 @@ import styles from "./attendance.module.scss";
 
 export default function AttendanceForm() {
   const [attendance, setAttendance] = useState("");
-  const [isSubmitted, setIsSubmitted] = useState(true);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   function Submit(e) {
     e.preventDefault();
