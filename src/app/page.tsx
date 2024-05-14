@@ -45,7 +45,7 @@ export default function Home() {
 
       <div className=" kurmet text-center mt-10 text-[24px] sm:text-[20px] mb-[10px]">
         <p className="bastau">Той салтанаты:</p>
-        <p className="bastau">5 маусым 2024 жыл</p>
+        <p className="bastau">5 шілде 2024 жыл</p>
         <p className="bastau">сағат 18:00</p>
 
         <Image
