@@ -34,7 +34,7 @@ export default function AttendanceForm() {
 
   return (
     <div className={styles.App}>
-      {isSubmitted ? (
+      {!isSubmitted ? (
         <div className="form center mb-20">
           <p
             className={`${styles.anketa} text-center min-w-[300px] text-[18px] sm:text-[20px] mb-[10px]`}
