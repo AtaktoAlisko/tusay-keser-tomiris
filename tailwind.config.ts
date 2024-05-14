@@ -8,7 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      
+      animation: {
+        spin: "spin 20s linear infinite",
+      },
     },
   },
   plugins: [],

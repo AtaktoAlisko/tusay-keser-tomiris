@@ -8,7 +8,7 @@ import stars from "../../../public/images/stars.png";
 import styles from "./main.module.scss";
 import ui from "../../../public/images/ui.png";
 import proigr from "../../../public/images/proiriv.png";
-import muz from "../../assets/muz.mp3";
+import muz from "../../assets/muzik.mp3";
 
 export default function Main() {
   const [audio, setAudio] = useState(null);

@@ -5,7 +5,7 @@ import calendar from "../../public/images/calendar.png";
 import sleep from "../../public/images/bearSleep.png";
 import lenta from "../../public/images/lenta.png";
 import car from "../../public/images/car.png";
-import gis from "../../public/images/2gis.jpeg";
+import map from "../../public/images/map.png";
 import insta from "../../public/images/insta.webp";
 import sleepBear from "../../public/images/sleep.png";
 import Attendance from "../components/Attendance";
@@ -105,8 +105,8 @@ export default function Home() {
           <Image
             height={50}
             width={50}
-            src={gis}
-            alt="gis"
+            src={map}
+            alt="map"
             style={{ marginRight: "30px" }}
           />
         </a>
