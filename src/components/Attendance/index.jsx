@@ -32,90 +32,90 @@ export default function AttendanceForm() {
       });
   }
 
+  if (isSubmitted) {
+    <div className={styles.App}>
+      <p className="text-center min-w-[300px] text-[18px] sm:text-[20px] mb-[50px]">
+        Cіздің жауабыңыз қабылданды!
+      </p>
+    </div>;
+  }
+
   return (
     <div className={styles.App}>
-      {!isSubmitted ? (
-        <div className="form center mb-20">
-          <p
-            className={`${styles.anketa} text-center min-w-[300px] text-[18px] sm:text-[20px] mb-[10px]`}
-          >
-            Анкетаны толтыруыңызды сұраймыз
-          </p>
+      <div className="form center mb-20">
+        <p
+          className={`${styles.anketa} text-center min-w-[300px] text-[18px] sm:text-[20px] mb-[10px]`}
+        >
+          Анкетаны толтыруыңызды сұраймыз
+        </p>
 
-          <p
-            className={`${styles.anketa} text-center min-w-[300px] text-[18px] sm:text-[20px] mb-[10px]`}
-          >
-            Біз үшін өте маңызды!
-          </p>
-          <div className="min-w-[300px]: mx-[20px] sm: mx-auto relative mt-6">
-            <form className="form" onSubmit={(e) => Submit(e)}>
-              <div className="min-w-[300px]: mx-5">
+        <p
+          className={`${styles.anketa} text-center min-w-[300px] text-[18px] sm:text-[20px] mb-[10px]`}
+        >
+          Біз үшін өте маңызды!
+        </p>
+        <div className="min-w-[300px]: mx-[20px] sm: mx-auto relative mt-6">
+          <form className="form" onSubmit={(e) => Submit(e)}>
+            <div className="min-w-[300px]: mx-5">
+              <input
+                className="min-w-[300px]:text-[14px] sm: text-[16px]"
+                placeholder="Атыңыз"
+                name="Name"
+                type="text"
+              />
+              <input
+                className="h-[100px] min-w-[300px]:text-[14px] sm:text-[16px]"
+                placeholder="Тілектеріңіз"
+                name="Message"
+                type="text"
+              />
+            </div>
+            <div className={`${styles.radio}`}>
+              <div className="flex items-center mb-2">
                 <input
-                  className="min-w-[300px]:text-[14px] sm: text-[16px]"
-                  placeholder="Атыңыз"
-                  name="Name"
-                  type="text"
+                  type="radio"
+                  id="willAttend"
+                  value="Келемін"
+                  checked={attendance === "Келемін"}
+                  onChange={() => setAttendance("Келемін")}
                 />
+                <label htmlFor="willAttend" className="ml-2">
+                  Келемін
+                </label>
+              </div>
+              <div className="flex items-center mb-2">
                 <input
-                  className="h-[100px] min-w-[300px]:text-[14px] sm:text-[16px]"
-                  placeholder="Тілектеріңіз"
-                  name="Message"
-                  type="text"
+                  type="radio"
+                  id="willAttendWithWife"
+                  value="Жұбайымен"
+                  checked={attendance === "Жұбайымен"}
+                  onChange={() => setAttendance("Жұбайымен")}
                 />
+                <label htmlFor="willAttendWithWife" className="ml-2">
+                  Жұбайымен
+                </label>
               </div>
-              <div className={`${styles.radio}`}>
-                <div className="flex items-center mb-2">
-                  <input
-                    type="radio"
-                    id="willAttend"
-                    value="Келемін"
-                    checked={attendance === "Келемін"}
-                    onChange={() => setAttendance("Келемін")}
-                  />
-                  <label htmlFor="willAttend" className="ml-2">
-                    Келемін
-                  </label>
-                </div>
-                <div className="flex items-center mb-2">
-                  <input
-                    type="radio"
-                    id="willAttendWithWife"
-                    value="Жұбайымен"
-                    checked={attendance === "Жұбайымен"}
-                    onChange={() => setAttendance("Жұбайымен")}
-                  />
-                  <label htmlFor="willAttendWithWife" className="ml-2">
-                    Жұбайымен
-                  </label>
-                </div>
-                <div className="flex items-center">
-                  <input
-                    type="radio"
-                    id="cannotAttend"
-                    value="Келе алмаймын"
-                    checked={attendance === "Келе алмаймын"}
-                    onChange={() => setAttendance("Келе алмаймын")}
-                  />
-                  <label htmlFor="cannotAttend" className="ml-2">
-                    Келе алмаймын
-                  </label>
-                </div>
+              <div className="flex items-center">
+                <input
+                  type="radio"
+                  id="cannotAttend"
+                  value="Келе алмаймын"
+                  checked={attendance === "Келе алмаймын"}
+                  onChange={() => setAttendance("Келе алмаймын")}
+                />
+                <label htmlFor="cannotAttend" className="ml-2">
+                  Келе алмаймын
+                </label>
               </div>
-              <div className="flex-1 flex justify-center min-w-[300px]: mx-5">
-                <button className={`${styles.button}`} type="submit">
-                  Жіберу
-                </button>
-              </div>
-            </form>
-          </div>
+            </div>
+            <div className="flex-1 flex justify-center min-w-[300px]: mx-5">
+              <button className={`${styles.button}`} type="submit">
+                Жіберу
+              </button>
+            </div>
+          </form>
         </div>
-      ) : (
-        <div className={styles.App}>
-          <p className="text-center min-w-[300px] text-[18px] sm:text-[20px] mb-[50px]">
-            Cіздің жауабыңыз қабылданды!
-          </p>
-        </div>
-      )}
+      </div>
     </div>
   );
 }
