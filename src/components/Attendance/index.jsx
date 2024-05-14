@@ -84,7 +84,7 @@ export default function AttendanceForm() {
               />
             </div>
             <div className={styles.radio}>
-              <div className="flex items-center">
+              <div className="flex items-center ml-2">
                 <input
                   type="radio"
                   id="willAttend"
@@ -96,7 +96,7 @@ export default function AttendanceForm() {
                   Келемін
                 </label>
               </div>
-              <div className="flex items-center">
+              <div className="flex items-center  ml-2">
                 <input
                   type="radio"
                   id="willAttendWithWife"
@@ -108,7 +108,7 @@ export default function AttendanceForm() {
                   Жұбайымен
                 </label>
               </div>
-              <div className="flex items-center">
+              <div className="flex items-center  ml-2">
                 <input
                   type="radio"
                   id="cannotAttend"
