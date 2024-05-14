@@ -4,6 +4,10 @@ import styles from "./attendance.module.scss";
 
 export default function AttendanceForm() {
   const [attendance, setAttendance] = useState("");
+  const [title, setTitle] = useState("");
+  const [text, setText] = useState("");
+  const [isLoading, setLoading] = useState(false);
+
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   function Submit(e) {
@@ -13,8 +17,7 @@ export default function AttendanceForm() {
 
     formDatab.append("attendance", attendance);
 
-    console.log("Form Data:", Object.fromEntries(formDatab.entries()));
-
+    setLoading(true);
     fetch(
       "https://script.google.com/macros/s/AKfycbyp-VVf7afBotIsgC1eyVI0W7mRFyMcV9CtAetHuD6tHnOegquXUoCv-Gojfx8eHMo/exec",
       {
@@ -24,20 +27,26 @@ export default function AttendanceForm() {
     )
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
-        setIsSubmitted(true);
+        // setIsSubmitted(true);
+        setAttendance("");
+        setTitle("");
+        setText("");
+        setLoading(false);
       })
       .catch((error) => {
         console.log(error);
+        setLoading(false);
       });
   }
 
   if (isSubmitted) {
-    <div className={styles.App}>
-      <p className="text-center min-w-[300px] text-[18px] sm:text-[20px] mb-[50px]">
-        Cіздің жауабыңыз қабылданды!
-      </p>
-    </div>;
+    return (
+      <div className={styles.App}>
+        <p className="text-center min-w-[300px] text-[18px] sm:text-[20px] mb-[10px]">
+          Cіздің жауабыңыз қабылданды!
+        </p>
+      </div>
+    );
   }
 
   return (
@@ -58,20 +67,24 @@ export default function AttendanceForm() {
           <form className="form" onSubmit={(e) => Submit(e)}>
             <div className="min-w-[300px]: mx-5">
               <input
-                className="min-w-[300px]:text-[14px] sm: text-[16px]"
+                className="min-w-[300px]:text-[14px] sm:text-[20px]"
                 placeholder="Атыңыз"
                 name="Name"
                 type="text"
+                value={title}
+                onChange={(e) => setTitle(e.target.value)}
               />
               <input
-                className="h-[100px] min-w-[300px]:text-[14px] sm:text-[16px]"
+                className="h-[100px] min-w-[300px]:text-[14px] sm:text-[20px]"
                 placeholder="Тілектеріңіз"
                 name="Message"
                 type="text"
+                onChange={(e) => setText(e.target.value)}
+                value={text}
               />
             </div>
-            <div className={`${styles.radio}`}>
-              <div className="flex items-center mb-2">
+            <div className={styles.radio}>
+              <div className="flex items-center">
                 <input
                   type="radio"
                   id="willAttend"
@@ -83,7 +96,7 @@ export default function AttendanceForm() {
                   Келемін
                 </label>
               </div>
-              <div className="flex items-center mb-2">
+              <div className="flex items-center">
                 <input
                   type="radio"
                   id="willAttendWithWife"
@@ -109,7 +122,11 @@ export default function AttendanceForm() {
               </div>
             </div>
             <div className="flex-1 flex justify-center min-w-[300px]: mx-5">
-              <button className={`${styles.button}`} type="submit">
+              <button
+                className={styles.button}
+                type="submit"
+                disabled={isLoading}
+              >
                 Жіберу
               </button>
             </div>
