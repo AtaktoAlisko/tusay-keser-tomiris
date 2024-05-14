@@ -1,113 +1,145 @@
 import Image from "next/image";
+import Main from "../components/Main";
+import stars from "../../public/images/stars.png";
+import calendar from "../../public/images/calendar.png";
+import sleep from "../../public/images/bearSleep.png";
+import lenta from "../../public/images/lenta.png";
+import car from "../../public/images/car.png";
+import gis from "../../public/images/2gis.jpeg";
+import insta from "../../public/images/insta.webp";
+import sleepBear from "../../public/images/sleep.png";
+import Attendance from "../components/Attendance";
+import heart from "../../public/images/heart.png";
+import shar from "../../public/images/Shar.png";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
+    <main className="flex  flex-col items-center text-[16px] sm:text-[20px] mb-[10px]">
+      <Main />
+      <div className="  mt-10 mb-20 text-[24px] sm:text-[20px] mb-[10px] text-center  ">
+        <p className="kurmet kurmet2 mb-10">Құрметті қонақтар!</p>
+        <p className="kurmet">Cіз(дер)ді қызымыз</p>
+        <p className="kurmet2">Томирисіміздін</p>
+        <p className="kurmet">тұсау кесер тойына</p>
+        <p className="kurmet">арналған салтанатты</p>
+        <p className="kurmet">ақ дастарханымыздың</p>
+        <p className="kurmet">қадірлі қонағы болуға</p>
+        <p className="kurmet">шақырамыз!!!</p>
       </div>
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
+      <div className="flex justify-center justify-between">
         <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+          className="stars"
+          height={60}
+          width={70}
+          src={stars}
+          alt="stars"
+        />
+        <Image
+          className="stars"
+          height={60}
+          width={70}
+          src={stars}
+          alt="stars"
         />
       </div>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+      <div className=" kurmet text-center mt-10 text-[24px] sm:text-[20px] mb-[10px]">
+        <p className="bastau">Той салтанаты:</p>
+        <p className="bastau">5 маусым 2024 жыл</p>
+        <p className="bastau">сағат 18:00</p>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+        <Image
+          className="mt-10 "
+          height={200}
+          width={400}
+          src={calendar}
+          alt="calendar"
+        />
+      </div>
+      <Image className="shar" height={128} width={128} src={shar} alt="shar" />
+      <Image className="image" height={30} width={50} src={heart} alt="heart" />
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
+      <Image
+        className="mt-[150px]"
+        height={200}
+        width={200}
+        src={sleep}
+        alt="sleep"
+      />
+      <div className="overflow-hidden  flex justify-center items-center min-w-[300px] md:block mt-[-85px]">
+        <Image
+          className="rotate-[-20deg] h-[250px] w-[400px]"
+          height={364}
+          width={364}
+          src={lenta}
+          alt="lenta"
+        />
+        <Image
+          className="rotate-[28deg] h-[250px] w-[400px]"
+          height={364}
+          width={364}
+          src={lenta}
+          alt="lenta"
+        />
+      </div>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
+      <div className="kurmet text-center mt-[-60px]  text-[20px] sm:text-[20px] mb-[10px] ">
+        <p>Мекен жайымыз: </p>
+        <p> Талдықорған қаласы</p>
+        <p>Куренбель 40</p>
+        <p className=" kurmet2 ">"Пиала"</p>
+        <p> Мейрамханасы</p>
+      </div>
+
+      <Image className="car" height={233} width={233} src={car} alt="car" />
+
+      <div className="kurmet text-center mb-10 text-[18px] sm:text-[20px]">
+        <p className="">Cіздерге ыңғайлы болу үшін</p>
+        <p className="">төмендегі көрсетілген картаны қолданыңыз</p>
+      </div>
+
+      {/* <Map /> */}
+
+      <div className="flex justify-center justify-between">
+        <a href="https://yandex.ru/maps/org/piala/33010557490/?ll=78.420631%2C45.048394&z=15.37">
+          <Image
+            height={50}
+            width={50}
+            src={gis}
+            alt="gis"
+            style={{ marginRight: "30px" }}
+          />
+        </a>
+        <a href="https://www.instagram.com/piala.tdk/?igsh=NTc4MTIwNjQ2YQ%3D%3D">
+          <Image height={50} width={50} src={insta} alt="insta" />
         </a>
       </div>
+      <div className="flex justify-center justify-between  mb-[-80px]  mt-[40px] gap-[120px]">
+        <Image
+          className="stars"
+          height={60}
+          width={70}
+          src={stars}
+          alt="stars"
+        />
+        <Image
+          className="stars"
+          height={60}
+          width={70}
+          src={stars}
+          alt="stars"
+        />
+      </div>
+      <div className="kurmet text-center mb--10 text-[18px] sm:text-[20px]">
+        <p className=""> Той иелері:</p>
+        <p className=" ">Әжесі:Айгуль</p>
+        <p className="">Ата-анасы</p>
+        <p className="">Алибек && Мөлдір</p>
+      </div>
+
+      <Image height={200} width={200} src={sleepBear} alt="sleepBear" />
+
+      <Attendance />
     </main>
   );
 }
